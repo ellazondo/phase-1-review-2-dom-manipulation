@@ -6,6 +6,7 @@
 /*
  * Your code goes here
  */
+const petList = document.getElementById("pet-list");
 
 /* Deliverable # 2: .createElement()
  * Step 1 - Declare a variable called "newPet".
