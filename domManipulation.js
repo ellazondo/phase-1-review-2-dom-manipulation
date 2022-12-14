@@ -6,6 +6,7 @@
 /*
  * Your code goes here
  */
+const petList = document.querySelector("#pet-list");
 
 /* Deliverable # 2: .createElement()
  * Step 1 - Declare a variable called "newPet".
@@ -15,18 +16,22 @@
 /*
  * Your code goes here
  */
+const newPet = document.createElement("li");
 
 // Deliverable # 3: .textContent - Change the textContent of "newPet" to any pet of your choosing (for example: "Guinea Pig")
 
 /*
  * Your code goes here
+
  */
+newPet.textContent = "Kitten";
 
 // Deliverable # 4: .appendChild() - Use .appendChild() to append "newPet" (the new li element you created) to "petList" (the ol containing all of the pets).
 
 /*
  * Your code goes here
  */
+petList.appendChild(newPet);
 
 /* Deliverable # 5: .querySelectorAll()
  * Step 1 - Declare a variable called "divs".
@@ -36,6 +41,9 @@
 /*
  * Your code goes here
  */
+
+const divs = document.querySelectorAll("div");
+console.log("it should show divs here", divs);
 
 /* Deliverable # 6: .forEach()
  * Step 1 - Use .forEach() to iterate through each of the div elements contained inside of the "divs" variable.
@@ -49,6 +57,11 @@
 /*
  * Your code goes here
  */
+divs.forEach(function (div) {
+  const copyrightElement = document.createElement("h2");
+  copyrightElement.textContent = "© 2022 Gabriella Elizondo";
+  div.appendChild(copyrightElement);
+});
 
 /* Deliverable # 7: .getElementById()
  * Step 1 - Declare a variable called "notAShop".
@@ -58,6 +71,7 @@
 /*
  * Your code goes here
  */
+const notAShop = document.getElementById("not-a-shop");
 
 /* Deliverable # 8: .remove()
  * Step 1 - Use .remove() to remove the element with the id of 'not-a-shop' from the DOM. You already have a variable named "notAShop" that references this element.
@@ -66,6 +80,7 @@
 /*
  * Your code goes here
  */
+notAShop.remove();
 
 /* Deliverable # 9: .getElementsByClassName()
  * Step 1 - Declare a variable called "shops".
@@ -75,6 +90,7 @@
 /*
  * Your code goes here
  */
+const shops = document.getElementsByClassName("shop");
 
 /* Deliverable # 10: while loop
  * Step 1 - Declare a variable called "counter" using let and initialize "counter" with a value of 0.
@@ -89,9 +105,18 @@
 /*
  * Your code goes here
  */
+let counter = 0;
+while (counter < shops.length) {
+  const button = document.createElement("button");
+  button.textContent = "Like This Shop";
+  shops[counter].appendChild(button);
+  counter++;
+}
 
 // Bonus Deliverable: Finish creating the Candy Shop! There is already a div with the id of "candy-shop" currently set up for you.
 
 /*
  * Your code goes here
  */
+
+const candyShop = document.getElementById;
